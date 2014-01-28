@@ -6,8 +6,4 @@
 <h2>Now try to get <%= @sum %> again before rolling a 7</h2>
 
 
-<%= button_to "Roll the dice", "/dice/reroll", :sum => @sum, :class => "button", :method => :get %>
-<%= form_tag("/dice/reroll", method: "get") do %>
-  <%= label_tag(:sum, @sum) %>
-  <%= submit_tag("Roll the dice") %>
-<% end %>
+<%= button_to "Roll the dice", "/dice/reroll", :data => {:sum => @sum}, :class => "button", :method => :get %>
