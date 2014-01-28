@@ -1,0 +1,13 @@
+<h1>Dice Game</h1>
+
+<p><img src="https://uchicago.s3.amazonaws.com/d0<%= @d1.first %>.png"> <img src="https://uchicago.s3.amazonaws.com/d0<%= @d2.first %>.png"></p>
+
+<h2>Your Goal is now <%= @sum %></h2>
+<h2>Now try to get <%= @sum %> again before rolling a 7</h2>
+
+
+<%= button_to "Roll the dice", "/dice/reroll", :sum => @sum, :class => "button", :method => :get %>
+<%= form_tag("/dice/reroll", method: "get") do %>
+  <%= label_tag(:sum, @sum) %>
+  <%= submit_tag("Roll the dice") %>
+<% end %>

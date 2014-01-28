@@ -53,4 +53,9 @@ Dice::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  get("/dice", { :controller => "dice", :action => "play_game" })
+  get("/dice/startgame", { :controller => "dice", :action => "start_game" })
+  get("/dice/reroll", { :controller => "dice", :action => "re_roll" })
+
 end
