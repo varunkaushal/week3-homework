@@ -17,17 +17,17 @@ class DiceController < ApplicationController #Inheritance for all controllers
 		
 		if  @sum == 7 or @sum == 11
 			render "win"
-			puts "roll1 win"
+			puts "roll 1 win"
 			return
 		end
 		
 		if  @sum == 2 or @sum == 3 or @sum == 12
 			render "lose"
-			puts "roll1 lose"
+			puts "roll 1 lose"
 			return
 		else
 			render "rollagain"
-			puts "roll1 rollagain"
+			puts "roll 1 rollagain"
 			return
 		end
 	end
@@ -46,17 +46,17 @@ class DiceController < ApplicationController #Inheritance for all controllers
 		
 		if  @sum2 == 7 
 			render "lose"
-			puts "roll# lose"
+			puts "roll # lose"
 			return
 		end
 		
-		if  @sum == @sum2
+		if  @sum.to_i == @sum2
 			render "win"
-			puts "roll# win"
+			puts "roll # win"
 			return
 		else
 			render "rollagain"
-			puts "roll# rollagain"
+			puts "roll # rollagain"
 			return
 		end
 	end

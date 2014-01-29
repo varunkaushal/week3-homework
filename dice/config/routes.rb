@@ -56,6 +56,7 @@ Dice::Application.routes.draw do
   
   get("/dice", { :controller => "dice", :action => "play_game" })
   get("/dice/startgame", { :controller => "dice", :action => "start_game" })
-  get("/dice/reroll", { :controller => "dice", :action => "re_roll" })
+  post("/dice/startgame", { :controller => "dice", :action => "re_roll" })
+  
 
 end

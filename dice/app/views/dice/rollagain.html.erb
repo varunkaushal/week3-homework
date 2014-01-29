@@ -6,4 +6,4 @@
 <h2>Now try to get <%= @sum %> again before rolling a 7</h2>
 
 
-<%= button_to "Roll the dice", "/dice/reroll", :data => {:sum => @sum}, :class => "button", :method => :get %>
+<%= button_to "Roll the dice", {:sum => @sum}, :class => "button", :method => :post %>
