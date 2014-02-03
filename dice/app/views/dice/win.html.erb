@@ -1,7 +1,14 @@
-<h1>Dice Game</h1>
+<!doctype html>
 
-<p><img src="https://uchicago.s3.amazonaws.com/d0<%= @d1.first %>.png"> <img src="https://uchicago.s3.amazonaws.com/d0<%= @d2.first %>.png"></p>
+<html>
 
-<h2>YOU WIN!</h2>
+	<body>
+		<h1>Dice Game <hr> </h1>
 
-<%= button_to "Start Over", "/dice", :class => "button", :method => :get  %>
+		<p><img src="https://uchicago.s3.amazonaws.com/d0<%= @d1.first %>.png"> <img src="https://uchicago.s3.amazonaws.com/d0<%= @d2.first %>.png"></p>
+
+		<h2>YOU WIN!</h2>
+
+		<%= button_to "Start Over", "/dice", :class => "btn btn-success", :method => :get  %>
+	</body>
+</html>

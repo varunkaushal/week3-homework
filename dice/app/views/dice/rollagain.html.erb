@@ -1,9 +1,16 @@
-<h1>Dice Game</h1>
+<!doctype html>
 
-<p><img src="https://uchicago.s3.amazonaws.com/d0<%= @d1.first %>.png"> <img src="https://uchicago.s3.amazonaws.com/d0<%= @d2.first %>.png"></p>
+<html>
 
-<h2>Your Goal is now <%= @sum %></h2>
-<h2>Now try to get <%= @sum %> again before rolling a 7</h2>
+	<body>
+		<h1>Dice Game <hr> </h1>
+
+		<p><img src="https://uchicago.s3.amazonaws.com/d0<%= @d1.first %>.png"> <img src="https://uchicago.s3.amazonaws.com/d0<%= @d2.first %>.png"></p>
+
+		<h2>Your Goal is now <%= @sum %></h2>
+		<h2>Now try to get <%= @sum %> again before rolling a 7</h2>
 
 
-<%= button_to "Roll the dice", {:sum => @sum}, :class => "button", :method => :post %>
+		<%= button_to "Roll the dice", {:sum => @sum}, :class => "btn btn-success", :method => :post %>
+	</body>
+</html>
